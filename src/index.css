@@ -9,15 +9,29 @@ body {
 }
 
 .app {
-  background-image: url('./assets/cold-bg.jpg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4 ease;
 }
 
-.app.warm {
+.warm {
   background-image: url('./assets/warm-bg.jpg');
 }
+
+.cold {
+  background-image: url('./assets/cold-bg.jpg');
+}
+
+@media
+ (min-width: 700px) {
+   .warm {
+    background-image: url('./assets/warm-pc-bg.jpeg');
+   }
+   .cold {
+    background-image: url('./assets/cold-pc-bg.jpg');
+   }
+   
+  }
 
 main {
   min-height: 100vh;
@@ -28,6 +42,11 @@ main {
 .search-box {
   width: 100%;
   margin: 0 0 75px;
+}
+
+::placeholder {
+  color: #FFF;
+  opacity: 1;
 }
 
 .search-box .search-bar {
